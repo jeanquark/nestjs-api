@@ -1,0 +1,72 @@
+[
+    {
+        "race": "Siamese",
+        "name": "Luna",
+        "age": 3,
+        "gender": "Female",
+        "color": "Cream with brown points"
+    },
+    {
+        "race": "Maine Coon",
+        "name": "Oliver",
+        "age": 5,
+        "gender": "Male",
+        "color": "Brown tabby"
+    },
+    {
+        "race": "Persian",
+        "name": "Bella",
+        "age": 2,
+        "gender": "Female",
+        "color": "White"
+    },
+    {
+        "race": "Bengal",
+        "name": "Leo",
+        "age": 4,
+        "gender": "Male",
+        "color": "Spotted golden"
+    },
+    {
+        "race": "Ragdoll",
+        "name": "Milo",
+        "age": 1,
+        "gender": "Male",
+        "color": "Seal point"
+    },
+    {
+        "race": "Sphynx",
+        "name": "Cleo",
+        "age": 3,
+        "gender": "Female",
+        "color": "Pinkish white"
+    },
+    {
+        "race": "Scottish Fold",
+        "name": "Charlie",
+        "age": 2,
+        "gender": "Male",
+        "color": "Gray"
+    },
+    {
+        "race": "British Shorthair",
+        "name": "Lucy",
+        "age": 7,
+        "gender": "Female",
+        "color": "Blue-gray"
+    },
+    {
+        "race": "Abyssinian",
+        "name": "Max",
+        "age": 4,
+        "gender": "Male",
+        "color": "Ruddy brown"
+    },
+    {
+        "race": "Russian Blue",
+        "name": "Sophie",
+        "age": 2,
+        "gender": "Female",
+        "color": "Blue-gray"
+    }
+]
