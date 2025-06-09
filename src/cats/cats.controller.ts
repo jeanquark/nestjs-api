@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Get, Post, Param, Body, Put, Delete, Query } from '@nestjs/common';
-import CreateCatDto from './dto/create-cat.dto';
-import UpdateCatDto from './dto/update-cat.dto';
+import { Controller, Get, Post, Param, Body, Put, Patch, Delete, Query } from '@nestjs/common';
+import { CreateCatDto } from './dto/create-cat.dto';
+import { UpdateCatDto } from './dto/update-cat.dto';
 // import { CreateCatDto, UpdateCatDto } from './dto';
 import { CatsService } from './cats.service';
 import { Cat } from './schemas/cat.schema';
@@ -36,17 +36,31 @@ export class CatsController {
     }
 
     @Post()
-    async create(@Body() createCatDto: CreateCatDto) {
-        return 'This action adds a new cat';
+    async create(@Body() createCatDto: CreateCatDto): Promise<Cat> {
+        return this.catsService.create(createCatDto);
+        // return 'This action adds a new cat';
     }
 
-    @Put(':id')
-    update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
-        return `This action updates a #${id} cat`;
+    // @Put(':id')
+    // update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
+    //     return `This action updates a #${id} cat`;
+    // }
+
+    // @Delete(':id')
+    // remove(@Param('id') id: string) {
+    //     return `This action removes a #${id} cat`;
+    // }
+
+    @Patch(':id')
+    async update(
+        @Param('id') id: string,
+        @Body() updateCatDto: UpdateCatDto,
+    ): Promise<Cat> {
+        return this.catsService.update(id, updateCatDto);
     }
 
     @Delete(':id')
-    remove(@Param('id') id: string) {
-        return `This action removes a #${id} cat`;
+    async delete(@Param('id') id: string): Promise<{ deleted: boolean }> {
+        return this.catsService.delete(id);
     }
 }

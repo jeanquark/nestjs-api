@@ -18,6 +18,7 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
+Visit http://localhost:3000/
 
 # production mode
 $ npm run start:prod
