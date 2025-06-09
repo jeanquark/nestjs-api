@@ -41,16 +41,6 @@ export class CatsController {
         // return 'This action adds a new cat';
     }
 
-    // @Put(':id')
-    // update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
-    //     return `This action updates a #${id} cat`;
-    // }
-
-    // @Delete(':id')
-    // remove(@Param('id') id: string) {
-    //     return `This action removes a #${id} cat`;
-    // }
-
     @Patch(':id')
     async update(
         @Param('id') id: string,

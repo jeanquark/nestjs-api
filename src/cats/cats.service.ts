@@ -46,7 +46,6 @@ export class CatsService {
         }
     }
 
-    // NEW: Update a cat
     async update(id: string, updateCatDto: UpdateCatDto): Promise<Cat> {
         try {
             const existingCat = await this.catModel
@@ -65,7 +64,6 @@ export class CatsService {
         }
     }
 
-    // NEW: Delete a cat
     async delete(id: string): Promise<{ deleted: boolean; message?: string }> {
         try {
             const result = await this.catModel.deleteOne({ _id: id }).exec();
