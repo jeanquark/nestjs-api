@@ -6,6 +6,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 // import { CatsController } from './cats/cats.controller';
 // import { CatsService } from './cats/cats.service';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 import { CatsModule } from './cats/cats.module';
 // import { ServeStaticModule } from '@nestjs/serve-static';
 // import { join } from 'path';
@@ -24,6 +26,8 @@ import { CatsModule } from './cats/cats.module';
     // MongooseModule.forRoot('mongodb://127.0.0.1:27017/nestjs'),
     MongooseModule.forRoot(process.env.MONGO_URI_LOCAL!),
     AppModule,
+    AuthModule,
+    UsersModule,
     CatsModule
   ],
   // imports: [MongooseModule.forRoot(process.env.MONGO_CONNECTION_STRING)],
