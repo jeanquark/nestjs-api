@@ -22,7 +22,10 @@ import { CatsModule } from './cats/cats.module';
     //     fallthrough: false,
     //   },
     // }),
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+        isGlobal: true, // Makes the ConfigService available globally
+        envFilePath: '.env',
+    }),
     // MongooseModule.forRoot('mongodb://127.0.0.1:27017/nestjs'),
     MongooseModule.forRoot(process.env.MONGO_URI_LOCAL!),
     AppModule,

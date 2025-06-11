@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { IsString, IsBoolean, Length } from 'class-validator';
+import { IsString, IsEmail, IsBoolean, IsNotEmpty, Length } from 'class-validator';
 
 export class CreateUserDto {
     @IsString()
@@ -11,7 +11,8 @@ export class CreateUserDto {
     @Length(2, 100)
     lastname: string;
 
-    @IsString()
+    @IsEmail()
+    @IsNotEmpty()
     @Length(2, 100)
     email: string;
 

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Get, Post, Param, Body, Put, Patch, Delete, Query } from '@nestjs/common';
+import { Controller, Get, Post, Param, Body, Patch, Delete, Query } from '@nestjs/common';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { UpdateCatDto } from './dto/update-cat.dto';
 // import { CreateCatDto, UpdateCatDto } from './dto';
